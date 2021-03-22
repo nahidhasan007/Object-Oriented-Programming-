@@ -23,7 +23,16 @@ class Employee:
         if day.weekday == 6 or day.weekday == 7:
             print("Holiday!")
         else:
-            print("Working Day!")    
+            print("Working Day!")
+    
+    def __repr__(self):
+       return "Employee('{}', '{}', '{}')".format(self.name, self.email, self.pay)
+
+    def __str__(self):
+        return '{} - {}'.format(self.name,self.major)
+
+    def __add__(self,other):
+        return self.pay + other.pay
 
 emp1 = Employee('Nahid','nhs@gmail.com','backend',50000)
 
